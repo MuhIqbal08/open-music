@@ -60,7 +60,7 @@ const init = async () => {
         message: 'terjadi kegagalan pada server kami',
       });
       newResponse.code(500);
-      console.log('Server Error:', response);
+      console.error(response.message);
       return newResponse;
     }
     return h.continue;
